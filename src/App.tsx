@@ -1,9 +1,12 @@
 import React from "react";
 import "./App.css";
+import Dashboard from "./pages/Dashboard/Dashboard";
 
 const App: React.FC = () => {
   return (
-    <div></div>
+    <div className="App">
+      <Dashboard />
+    </div>
   );
 }
 

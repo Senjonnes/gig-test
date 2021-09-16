@@ -29,6 +29,7 @@ module.exports = {
       blueText: "rgba(5, 30, 97, 0.93)",
       greenModal: "rgba(3, 208, 36, 0.7);",
       yellowModal: "rgba(253, 190, 17, 1)",
+      fadedWhite: "#FEFEFF",
 
       black: colors.black,
       white: colors.white,
