@@ -1,0 +1,6 @@
+.selected img {
+  filter: hue-rotate(150deg);
+}
+.selected div {
+  color: #fbb30b;
+}

@@ -1,14 +1,14 @@
-import * as React from "react";
+import React from "react";
 import AppLayout from "../../layouts/AppLayout/AppLayout";
 
-const Dashboard = () => {
+const Company: React.FC = () => {
   return (
     <AppLayout>
       <>
-        <div>Dashboard</div>
+        <div>Company</div>
       </>
     </AppLayout>
   );
 };
 
-export default Dashboard;
+export default Company;

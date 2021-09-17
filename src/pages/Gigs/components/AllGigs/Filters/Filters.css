@@ -1,0 +1,30 @@
+.svg_a .a {
+  fill: #565d74;
+}
+
+.svg_a.active .a {
+  fill: #e18700;
+}
+
+.svg_a .b {
+  opacity: 0.5;
+}
+
+.svg_a .c {
+  clip-path: url(#a);
+}
+
+.filters .ant-select .ant-select-selector {
+  border: none;
+  border-radius: 0.75rem !important;
+}
+
+.filters .ant-select-focused {
+  border: none;
+}
+
+.filters .ant-select {
+  display: flex;
+  align-items: center;
+  width: 100% !important;
+}

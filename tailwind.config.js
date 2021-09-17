@@ -6,6 +6,7 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
+      xs: "425px",
       sm: "768px",
       md: "1024px",
       lg: "1280px",
@@ -15,7 +16,8 @@ module.exports = {
     colors: {
       transparent: "transparent",
       current: "currentColor",
-      primary: "#243558",
+      primary: "#FBB30B",
+      primaryDeep: "#E18700",
       sidebar: "#263C65",
       sidebarOne: "#112957",
       dashboard: "#F3FAFC",
@@ -27,9 +29,11 @@ module.exports = {
       cancelText: "rgba(74, 92, 126, 1)",
       submitBlue: "rgba(125, 189, 250, 1)",
       blueText: "rgba(5, 30, 97, 0.93)",
-      greenModal: "rgba(3, 208, 36, 0.7);",
-      yellowModal: "rgba(253, 190, 17, 1)",
+      deadGray: "#BCBCBC",
+      lightDark: "#565d74",
       fadedWhite: "#FEFEFF",
+      deepBlue: "#2F417E",
+      faintedBlack: "#E3E3E3",
 
       black: colors.black,
       white: colors.white,

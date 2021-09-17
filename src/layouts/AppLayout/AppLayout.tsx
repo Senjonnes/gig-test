@@ -18,18 +18,22 @@ const AppLayout: React.FC<Props> = ({ children }) => {
     {
       name: "Dashboard",
       logo: home,
+      link: '/'
     },
     {
       name: "Gigs",
       logo: briefcase,
+      link: '/gigs'
     },
     {
       name: "Company",
       logo: company,
+      link: '/company'
     },
     {
       name: "Account",
       logo: user,
+      link: '/account'
     },
   ];
 
@@ -47,14 +51,14 @@ const AppLayout: React.FC<Props> = ({ children }) => {
         </a>
         <nav>
           {menu.map((m: Menu) => (
-            <MenuButton key={m.logo} name={m.name} logo={m.logo} />
+            <MenuButton key={m.logo} name={m.name} logo={m.logo} link={m.link} />
           ))}
         </nav>
       </div>
-      <div className="flex-1 text-2xl font-bold">
+      <div className="flex-1">
         <TopNavBar handleClick={handleClick} />
 
-        <div className="pt-48 pb-20 px-10">{children}</div>
+        <div className="pt-48 pb-10">{children}</div>
       </div>
     </div>
   );
