@@ -36,7 +36,7 @@ const TopNavBar: React.FC<ITopNav> = ({ handleClick }) => {
               <input
                 type="text"
                 placeholder="Search"
-                className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative rounded-lg text-sm border border-blueGray-300 outline-none focus:outline-none focus:ring w-full pl-12"
+                className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative rounded-lg text-sm border outline-none focus:outline-none focus:ring-primaryDeep focus:ring-1 w-full pl-12 focus:border-transparent"
               />
             </div>
           </div>

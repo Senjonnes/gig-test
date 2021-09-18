@@ -1,8 +1,11 @@
 import * as React from "react";
+import { useSelector } from "react-redux";
 import { Table } from "antd";
 import "./AllGigsTable.css";
 import Checkbox from "antd/lib/checkbox/Checkbox";
 import { IUser } from "../../../../../models/IUsersState";
+import { LoadingOutlined } from "@ant-design/icons";
+import { RootState } from "../../../../../redux/reducers";
 
 type Props = {
   [key: string]: IUser[];
@@ -80,9 +83,19 @@ const AllGigsTable: React.FC<Props> = ({ users }) => {
         })
       : [];
 
+  const loading: boolean = useSelector(
+    (state: RootState | any) => state?.users?.loading
+  );
+
+  const tableLoading = {
+    spinning: loading,
+    indicator: <LoadingOutlined twoToneColor="#E18700" />,
+  };
+
   return (
     <div className="mt-10 all_gigs_table">
       <Table
+        loading={tableLoading}
         pagination={{ pageSize: 5 }}
         scroll={{ x: 400 }}
         columns={columns}
