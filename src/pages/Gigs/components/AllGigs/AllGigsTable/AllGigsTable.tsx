@@ -89,7 +89,7 @@ const AllGigsTable: React.FC<Props> = ({ users }) => {
 
   const tableLoading = {
     spinning: loading,
-    indicator: <LoadingOutlined style={{ color: "red", fontSize: 24 }} />,
+    indicator: <LoadingOutlined style={{ color: "#E18700", fontSize: 24 }} />,
   };
 
   return (

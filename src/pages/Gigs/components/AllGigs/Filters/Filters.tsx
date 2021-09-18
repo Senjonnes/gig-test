@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Filters.css";
 import { Select } from "antd";
 import { IAllGigsFilter } from "../../../../../models/IGig";
+import { CheckOutlined } from "@ant-design/icons";
 const { Option } = Select;
 
 const KEYWORDS: Array<string> = ["TM30", "TM31"];
@@ -101,13 +102,15 @@ const Filters: React.FC<IAllGigsFilter> = ({ iHandleFilter }) => {
         <div
           onClick={() => handleFilter(1)}
           className={
-            "flex justify-center items-center h-10 text-sm rounded-xl p-2 " +
+            "flex items-center items-center h-10 text-sm rounded-xl p-2 cursor-pointer " +
             (filterFreelance
-              ? "border-2 border-primaryDeep text-primaryDeep font-bold"
-              : "border border-gray-200 text-deadGray font-light")
+              ? "border-2 border-primaryDeep text-primaryDeep font-bold justify-around"
+              : "border border-gray-200 text-deadGray font-light justify-center")
           }
         >
-          Freelance
+          <span>Freelance</span>
+          {filterFreelance && <CheckOutlined style={{ color: "#E18700" }} />}
+          
         </div>
         <div
           className={
@@ -204,7 +207,7 @@ const Filters: React.FC<IAllGigsFilter> = ({ iHandleFilter }) => {
         <div
           onClick={() => handleFilter(2)}
           className={
-            "flex space-x-2 items-center justify-center h-10 text-sm rounded-xl p-2 " +
+            "flex items-center justify-between h-10 text-sm rounded-xl p-2 cursor-pointer " +
             (filterRemoteFriendly
               ? "border-2 border-primaryDeep text-primaryDeep font-bold"
               : "border border-gray-200 text-deadGray font-light")
@@ -235,11 +238,12 @@ const Filters: React.FC<IAllGigsFilter> = ({ iHandleFilter }) => {
             </g>
           </svg>
           <span>Remote friendly</span>
+          {filterRemoteFriendly && <CheckOutlined style={{ color: "#E18700" }} />}
         </div>
         <div
           onClick={() => handleFilter(3)}
           className={
-            "flex space-x-2 items-center justify-center h-10 text-sm rounded-xl p-2 " +
+            "flex items-center justify-around h-10 text-sm rounded-xl p-2 cursor-pointer " +
             (filterDesign
               ? "border-2 border-primaryDeep text-primaryDeep font-bold"
               : "border border-gray-200 text-deadGray font-light")
@@ -252,21 +256,28 @@ const Filters: React.FC<IAllGigsFilter> = ({ iHandleFilter }) => {
             viewBox="0 0 24 24"
             className={filterDesign ? "svg_a active" : "svg_a"}
           >
-            <defs></defs>
-            <g className="a">
-              <path
-                className="b"
-                d="M17,18H3a3,3,0,0,1-3-3V7A3,3,0,0,1,3,4H6V2.5A2.5,2.5,0,0,1,8.5,0h3A2.5,2.5,0,0,1,14,2.5V4h3a3,3,0,0,1,3,3v8A3,3,0,0,1,17,18ZM15,6V16h2a1,1,0,0,0,1-1V7a1,1,0,0,0-1-1ZM7,6V16h6V6ZM3,6A1,1,0,0,0,2,7v8a1,1,0,0,0,1,1H5V6ZM8.5,2a.5.5,0,0,0-.5.5V4h4V2.5a.5.5,0,0,0-.5-.5Z"
-                transform="translate(2 3)"
-              />
-            </g>
+            <defs>
+              <clipPath id="a">
+                <path
+                  className="a"
+                  d="M9.9,20H9.859A10,10,0,0,1,9.9,0h.029a10.592,10.592,0,0,1,7.606,3.085,8.444,8.444,0,0,1,2.453,6.244A6.151,6.151,0,0,1,13.879,15H12.228a.5.5,0,0,0-.5.5.493.493,0,0,0,.128.325,2.52,2.52,0,0,1,.567,2.289A2.583,2.583,0,0,1,9.9,20ZM9.921,2A8.107,8.107,0,0,0,2.072,8.895,8,8,0,0,0,9.886,18c.319-.02.547-.158.594-.358a.519.519,0,0,0-.121-.488A2.494,2.494,0,0,1,12.228,13h1.651A4.162,4.162,0,0,0,17.993,9.25,6.462,6.462,0,0,0,16.1,4.478,8.5,8.5,0,0,0,10,2ZM5,12a1.5,1.5,0,1,1,.838-.256A1.5,1.5,0,0,1,5,12Zm9-4a1.5,1.5,0,1,1,.75-.2A1.5,1.5,0,0,1,14,8ZM6,8A1.5,1.5,0,1,1,7.3,7.25,1.5,1.5,0,0,1,6,8Zm4-2a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,10,6Z"
+                  transform="translate(2.002 2)"
+                />
+              </clipPath>
+            </defs>
+            <path
+              className="a"
+              d="M9.9,20H9.859A10,10,0,0,1,9.9,0h.029a10.592,10.592,0,0,1,7.606,3.085,8.444,8.444,0,0,1,2.453,6.244A6.151,6.151,0,0,1,13.879,15H12.228a.5.5,0,0,0-.5.5.493.493,0,0,0,.128.325,2.52,2.52,0,0,1,.567,2.289A2.583,2.583,0,0,1,9.9,20ZM9.921,2A8.107,8.107,0,0,0,2.072,8.895,8,8,0,0,0,9.886,18c.319-.02.547-.158.594-.358a.519.519,0,0,0-.121-.488A2.494,2.494,0,0,1,12.228,13h1.651A4.162,4.162,0,0,0,17.993,9.25,6.462,6.462,0,0,0,16.1,4.478,8.5,8.5,0,0,0,10,2ZM5,12a1.5,1.5,0,1,1,.838-.256A1.5,1.5,0,0,1,5,12Zm9-4a1.5,1.5,0,1,1,.75-.2A1.5,1.5,0,0,1,14,8ZM6,8A1.5,1.5,0,1,1,7.3,7.25,1.5,1.5,0,0,1,6,8Zm4-2a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,10,6Z"
+              transform="translate(2.002 2)"
+            />
           </svg>
           <span>Design</span>
+          {filterDesign && <CheckOutlined style={{ color: "#E18700" }} />}
         </div>
         <div
           onClick={() => handleFilter(4)}
           className={
-            "flex space-x-2 items-center justify-center h-10 text-sm rounded-xl p-2 " +
+            "flex items-center justify-around h-10 text-sm rounded-xl p-2 cursor-pointer " +
             (filterContract
               ? "border-2 border-primaryDeep text-primaryDeep font-bold"
               : "border border-gray-200 text-deadGray font-light")
@@ -289,6 +300,7 @@ const Filters: React.FC<IAllGigsFilter> = ({ iHandleFilter }) => {
             </g>
           </svg>
           <span>Contract</span>
+          {filterContract && <CheckOutlined style={{ color: "#E18700" }} />}
         </div>
       </div>
     </div>

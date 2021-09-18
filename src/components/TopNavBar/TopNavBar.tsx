@@ -12,7 +12,7 @@ const TopNavBar: React.FC<ITopNav> = ({ handleClick }) => {
     handleClick();
   };
   return (
-    <nav className="z-10 border fixed top-nav-bar left-64 right-0 bg-appBgColor">
+    <nav className="z-10 border fixed top-nav-bar md:left-64 right-0 bg-appBgColor left-0">
       <div className="max-w-6xl mx-auto px-4 py-6">
         <div className="flex justify-between">
           <div className="flex space-x-4 w-1/2 py-5 px-2 hidden md:flex ">
