@@ -1,0 +1,35 @@
+.react-tags-wrapper {
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  padding: 6px 6px 0px 6px;
+}
+
+.ReactTags__selected {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tag-wrapper {
+  background: #fef0ce;
+  color: #e18700;
+  padding: 5px 10px;
+  margin-right: 4px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+
+.ReactTags__remove {
+  margin-left: 4px;
+  font-size: 12px;
+}
+
+.ReactTags__tagInputField {
+  border: none;
+}
+
+.ReactTags__tagInputField:hover,
+.ReactTags__tagInputField:focus {
+  border: none;
+  outline: none;
+}

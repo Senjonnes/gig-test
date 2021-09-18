@@ -22,7 +22,7 @@ const Gigs: React.FC = () => {
           <h2 className="text-3xl font-extrabold leading-6 font-medium text-lightDark">
             Gigs
           </h2>
-          <button onClick={goToNewGig} className="space-x-8 bg-deepBlue hover:bg-primary text-white group flex items-center rounded-lg text-sm font-medium px-4 py-4">
+          <button onClick={goToNewGig} className="space-x-8 bg-deepBlue hover:bg-primary text-white group flex items-center rounded-xl text-sm font-medium px-4 py-4">
             <span>New gig</span>
             <svg
               className="group-hover:text-light-blue-600 text-light-blue-500 mr-2"

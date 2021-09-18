@@ -7,3 +7,9 @@ export class IMenu {
 export class ITopNav {
     handleClick!: () => void;
 }
+
+export class IButton {
+    onClick!: () => void;
+    type?: any;
+    name!: string;
+}
