@@ -5,6 +5,7 @@ import Account from "./pages/Account/Account";
 import Company from "./pages/Company/Company";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Gigs from "./pages/Gigs/Gigs";
+import NewGig from "./pages/Gigs/NewGig/NewGig";
 
 const App: React.FC = () => {
   return (
@@ -14,9 +15,15 @@ const App: React.FC = () => {
           <Route exact path="/">
             <Dashboard />
           </Route>
-          <Route exact path="/gigs">
-            <Gigs />
-          </Route>
+          <Route
+            path="/gigs"
+            render={({ match: { url } }) => (
+              <>
+                <Route path={`${url}/`} component={Gigs} exact />
+                <Route path={`${url}/new-gig`} component={NewGig} exact />
+              </>
+            )}
+          ></Route>
           <Route exact path="/company">
             <Company />
           </Route>

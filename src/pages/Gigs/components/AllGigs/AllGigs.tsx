@@ -13,7 +13,6 @@ const AllGigs: React.FC = () => {
   return (
     <div>
       <Filters iHandleFilter={handleFilter} />
-
       <AllGigsTable />
     </div>
   );

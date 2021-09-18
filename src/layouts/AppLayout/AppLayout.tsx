@@ -5,16 +5,16 @@ import briefcase from "../../assets/icon/briefcase.svg";
 import company from "../../assets/icon/company.svg";
 import user from "../../assets/icon/user.svg";
 import TopNavBar from "../../components/TopNavBar/TopNavBar";
-import { Props } from "../../models/Props";
 import MenuButton from "../../components/MenuButton/MenuButton";
-import { Menu } from "../../models/Menu";
+import { IJSX } from "../../models/IJSX";
+import { IMenu } from "../../models/IComponent";
 
-const AppLayout: React.FC<Props> = ({ children }) => {
+const AppLayout: React.FC<IJSX> = ({ children }) => {
   const sideBar = useRef<HTMLDivElement | null>(null);
   const handleClick = (): void => {
     sideBar.current?.classList.toggle("-translate-x-full");
   };
-  const menu: Menu[] = [
+  const menu: IMenu[] = [
     {
       name: "Dashboard",
       logo: home,
@@ -41,7 +41,8 @@ const AppLayout: React.FC<Props> = ({ children }) => {
     <div className="relative min-h-screen md:flex">
       <div
         ref={sideBar}
-        className="fixed z-20 border text-blue-100 w-64 space-y-10 py-10 px-2 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out"
+        className="fixed z-20 border text-blue-100 w-64 space-y-10 py-10 px-2 absolute inset-y-0 left-0 transform -translate-x-full md:fixed md:translate-x-0 transition duration-200 ease-in-out"
+        // className="fixed z-20 border text-blue-100 w-64 space-y-10 py-10 px-2 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out"
       >
         <a
           href="https://facebook.com"
@@ -50,12 +51,13 @@ const AppLayout: React.FC<Props> = ({ children }) => {
           <img src={giglogo} alt="" />
         </a>
         <nav>
-          {menu.map((m: Menu) => (
+          {menu.map((m: IMenu) => (
             <MenuButton key={m.logo} name={m.name} logo={m.logo} link={m.link} />
           ))}
         </nav>
       </div>
-      <div className="flex-1">
+      <div className="flex-1 md:ml-64">
+      {/* <div className="flex-1"> */}
         <TopNavBar handleClick={handleClick} />
 
         <div className="pt-48 pb-10">{children}</div>

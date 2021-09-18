@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ITabPane } from "../../../../models/ITabPane";
+import { ITabPane } from "../../../../models/IGig";
 
 const TabPane: React.FC<ITabPane> = ({ children, iSetTab }) => {
   const [openTab, setOpenTab] = useState<number>(1);
@@ -16,7 +16,7 @@ const TabPane: React.FC<ITabPane> = ({ children, iSetTab }) => {
     <div className="flex">
       <div className="w-full">
         <ul
-          className="sm:flex mb-0 list-none flex-wrap pt-5 flex-row border-b-2 border-faintedBlack"
+          className="sm:flex mb-0 list-none flex-wrap pt-5 flex-row border-b border-faintedBlack"
           role="tablist"
         >
           <li

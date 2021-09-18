@@ -1,4 +1,4 @@
-@import '~antd/dist/antd.css';
+@import "~antd/dist/antd.css";
 
 @font-face {
   font-family: "Avenir";
@@ -9,7 +9,7 @@
 html,
 body {
   font-family: "Avenir";
-  background: #FBFBFF;
+  background: #fbfbff;
 }
 
 .ant-select-focused .ant-select-selector,
@@ -22,7 +22,7 @@ body {
 
 a {
   text-decoration: none;
-  color: inherit!important;
+  color: inherit !important;
 }
 
 .ant-table-thead
@@ -60,4 +60,15 @@ a {
 .ant-checkbox:hover .ant-checkbox-inner,
 .ant-checkbox-input:focus + .ant-checkbox-inner {
   border-color: #fbb30b;
+}
+
+.ant-input:hover {
+  border-color: #fbb30b;
+  border-right-width: 1px !important;
+  outline: none;
+}
+
+.ant-input {
+ padding: 12px 20px;
+ border-radius: 10px;
 }

@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { AllGigsFilter } from "../../../../../models/IApp";
 import "./Filters.css";
 import { Select } from "antd";
+import { IAllGigsFilter } from "../../../../../models/IGig";
 const { Option } = Select;
 
 const KEYWORDS: Array<string> = ["TM30", "TM31"];
 const LOCATIONS: Array<string> = ["Lagos", "Abuja"];
 
-const Filters: React.FC<AllGigsFilter> = ({ iHandleFilter }) => {
+const Filters: React.FC<IAllGigsFilter> = ({ iHandleFilter }) => {
   const [filterFreelance, setFilterFreelance] = useState<boolean>(false);
   const [filterRemoteFriendly, setFilterRemoteFriendly] =
     useState<boolean>(false);
