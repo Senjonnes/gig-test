@@ -207,7 +207,7 @@ const Filters: React.FC<IAllGigsFilter> = ({ iHandleFilter }) => {
         <div
           onClick={() => handleFilter(2)}
           className={
-            "flex items-center justify-between h-10 text-sm rounded-xl p-2 cursor-pointer " +
+            "flex items-center justify-around h-10 text-sm rounded-xl p-2 cursor-pointer " +
             (filterRemoteFriendly
               ? "border-2 border-primaryDeep text-primaryDeep font-bold"
               : "border border-gray-200 text-deadGray font-light")
