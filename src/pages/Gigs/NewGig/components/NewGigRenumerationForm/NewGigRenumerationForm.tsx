@@ -25,7 +25,7 @@ const NewGigRenumerationForm: React.FC<INewGigRenumerationForm> = ({onClick, goB
         <button type="button" onClick={goBack}>
           Cancel
         </button>
-        <Button name="Continue" type="button" onClick={handleClick} />
+        <Button name="Add gig" type="button" onClick={handleClick} />
       </div>
     </div>
   );

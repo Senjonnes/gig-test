@@ -3,11 +3,11 @@ import notification from "../../assets/icon/notification.svg";
 import email from "../../assets/icon/email.svg";
 import settings from "../../assets/icon/settings.svg";
 import person from "../../assets/img/person.png";
-import './TopNavBar.css'
+import "./TopNavBar.css";
 import { ITopNav } from "../../models/IComponent";
 
-const TopNavBar: React.FC<ITopNav> = ({handleClick}) => {
-    const mobileMenuBtn = useRef<HTMLButtonElement | null>(null);
+const TopNavBar: React.FC<ITopNav> = ({ handleClick }) => {
+  const mobileMenuBtn = useRef<HTMLButtonElement | null>(null);
   const handleToggle = (): void => {
     handleClick();
   };

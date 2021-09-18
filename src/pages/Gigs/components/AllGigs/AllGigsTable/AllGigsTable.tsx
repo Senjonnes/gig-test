@@ -2,110 +2,93 @@ import * as React from "react";
 import { Table } from "antd";
 import "./AllGigsTable.css";
 import Checkbox from "antd/lib/checkbox/Checkbox";
+import { IUser } from "../../../../../models/IUsersState";
 
-const columns: Array<any> = [
-  {
-    title: "",
-    key: "check",
-    render: () => (
-      <>
-        <Checkbox></Checkbox>
-      </>
-    ),
-  },
-  {
-    title: "Role",
-    dataIndex: "role",
-    key: "role",
-  },
-  {
-    title: "Company",
-    dataIndex: "company",
-    key: "company",
-  },
-  {
-    title: "Date",
-    dataIndex: "date",
-    key: "date",
-    defaultSortOrder: "descend",
-    sorter: (a: any, b: any) => a - b,
-  },
-  {
-    title: "Salary",
-    dataIndex: "salary",
-    key: "salary",
-    defaultSortOrder: "descend",
-    sorter: (a: any, b: any) => a - b,
-  },
-  {
-    title: "",
-    key: "action",
-    dataIndex: "action",
-    render: (action: string) => (
-      <>
-        <button className="bg-primaryLight hover:bg-primary hover:text-white text-primary group flex items-center rounded-lg text-sm font-medium px-8 py-2">
-          {action}
-        </button>
-      </>
-    ),
-  },
-];
+type Props = {
+  [key: string]: IUser[];
+};
 
-const data: Array<any> = [
-  {
-    key: "1",
-    role: "Product Designer",
-    company: "TM30",
-    date: "20th, June 2020",
-    salary: "20,000 - 30,000",
-    action: "Delete",
-  },
-  {
-    key: "2",
-    role: "Product Designer",
-    company: "TM30",
-    date: "20th, June 2020",
-    salary: "20,000 - 30,000",
-    action: "Delete",
-  },
-  {
-    key: "3",
-    role: "Product Designer",
-    company: "TM30",
-    date: "20th, June 2020",
-    salary: "20,000 - 30,000",
-    action: "Delete",
-  },
-  {
-    key: "4",
-    role: "Product Designer",
-    company: "TM30",
-    date: "20th, June 2020",
-    salary: "20,000 - 30,000",
-    action: "Delete",
-  },
-  {
-    key: "5",
-    role: "Product Designer",
-    company: "TM30",
-    date: "20th, June 2020",
-    salary: "20,000 - 30,000",
-    action: "Delete",
-  },
-  {
-    key: "6",
-    role: "Product Designer",
-    company: "TM30",
-    date: "20th, June 2020",
-    salary: "20,000 - 30,000",
-    action: "Delete",
-  },
-];
+const AllGigsTable: React.FC<Props> = ({ users }) => {
+  const columns: Array<any> = [
+    {
+      title: "",
+      key: "check",
+      render: () => (
+        <>
+          <Checkbox></Checkbox>
+        </>
+      ),
+    },
+    {
+      title: "Name",
+      dataIndex: "name",
+      key: "name",
+      sorter: (a: any, b: any) => a.length - b.length,
+    },
+    {
+      title: "Username",
+      dataIndex: "username",
+      key: "username",
+    },
+    {
+      title: "Email",
+      dataIndex: "email",
+      key: "email",
+    },
+    {
+      title: "Website",
+      dataIndex: "website",
+      key: "website",
+    },
+    {
+      title: "Company",
+      dataIndex: "company",
+      key: "company",
+      sorter: (a: any, b: any) => a.name.length - b.name.length,
+    },
+    {
+      title: "Address",
+      dataIndex: "address",
+      key: "address",
+    },
+    {
+      title: "",
+      key: "action",
+      dataIndex: "action",
+      render: (action: string) => (
+        <>
+          <button className="bg-primaryLight hover:bg-primary hover:text-white text-primary group flex items-center rounded-lg text-sm font-medium px-8 py-2">
+            Delete
+          </button>
+        </>
+      ),
+    },
+  ];
 
-const AllGigsTable: React.FC = () => {
+  const data: Array<any> =
+    users && users.length
+      ? users.map((row, index) => {
+          return {
+            key: row.id,
+            name: row.name,
+            username: row.username,
+            email: row.email,
+            website: row.website,
+            company: row.company.name,
+            address: `${row.address.suite}, ${row.address.street}, ${row.address.city}`,
+          };
+        })
+      : [];
+
   return (
     <div className="mt-10 all_gigs_table">
-      <Table scroll={{ x: 400 }} columns={columns} dataSource={data} />;
+      <Table
+        pagination={{ pageSize: 5 }}
+        scroll={{ x: 400 }}
+        columns={columns}
+        dataSource={data}
+      />
+      ;
     </div>
   );
 };

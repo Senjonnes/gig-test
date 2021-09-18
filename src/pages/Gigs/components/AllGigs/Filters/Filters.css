@@ -17,6 +17,8 @@
 .filters .ant-select .ant-select-selector {
   border: none;
   border-radius: 0.75rem !important;
+  height: 2rem;
+  background: #fbfbff;
 }
 
 .filters .ant-select-focused {

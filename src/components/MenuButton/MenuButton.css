@@ -1,6 +1,15 @@
-.selected img {
-  filter: hue-rotate(150deg);
-}
 .selected div {
   color: #fbb30b;
+}
+
+.svg {
+  fill: #565d74;
+}
+
+.selected > div > .svg {
+  fill: #e18700;
+}
+
+.svg .a {
+  opacity: 0.8;
 }
