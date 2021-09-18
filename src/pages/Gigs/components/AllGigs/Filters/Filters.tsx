@@ -101,7 +101,7 @@ const Filters: React.FC<AllGigsFilter> = ({ iHandleFilter }) => {
         <div
           onClick={() => handleFilter(1)}
           className={
-            "flex justify-center text-sm rounded-xl p-2 bg-white " +
+            "flex justify-center text-sm rounded-xl p-2 " +
             (filterFreelance
               ? "border-2 border-primaryDeep text-primaryDeep font-bold"
               : "border border-gray-200 text-deadGray font-light")
@@ -111,7 +111,7 @@ const Filters: React.FC<AllGigsFilter> = ({ iHandleFilter }) => {
         </div>
         <div
           className={
-            "filters flex item-center justify-center text-sm font-light rounded-xl bg-white " +
+            "filters flex item-center justify-center text-sm font-light rounded-xl " +
             (filterKeywords
               ? "border-2 border-primaryDeep text-primaryDeep"
               : "border border-gray-200 text-deadGray")
@@ -157,7 +157,7 @@ const Filters: React.FC<AllGigsFilter> = ({ iHandleFilter }) => {
         </div>
         <div
           className={
-            "filters flex item-center justify-center text-sm font-light rounded-xl bg-white " +
+            "filters flex item-center justify-center text-sm font-light rounded-xl " +
             (filterLocation
               ? "border-2 border-primaryDeep text-primaryDeep"
               : "border border-gray-200 text-deadGray")
@@ -204,7 +204,7 @@ const Filters: React.FC<AllGigsFilter> = ({ iHandleFilter }) => {
         <div
           onClick={() => handleFilter(2)}
           className={
-            "flex space-x-2 items-center justify-center text-sm rounded-xl p-2 bg-white " +
+            "flex space-x-2 items-center justify-center text-sm rounded-xl p-2 " +
             (filterRemoteFriendly
               ? "border-2 border-primaryDeep text-primaryDeep font-bold"
               : "border border-gray-200 text-deadGray font-light")
@@ -239,7 +239,7 @@ const Filters: React.FC<AllGigsFilter> = ({ iHandleFilter }) => {
         <div
           onClick={() => handleFilter(3)}
           className={
-            "flex space-x-2 items-center justify-center text-sm rounded-xl p-2 bg-white " +
+            "flex space-x-2 items-center justify-center text-sm rounded-xl p-2 " +
             (filterDesign
               ? "border-2 border-primaryDeep text-primaryDeep font-bold"
               : "border border-gray-200 text-deadGray font-light")
@@ -266,7 +266,7 @@ const Filters: React.FC<AllGigsFilter> = ({ iHandleFilter }) => {
         <div
           onClick={() => handleFilter(4)}
           className={
-            "flex space-x-2 items-center justify-center text-sm rounded-xl p-2 bg-white " +
+            "flex space-x-2 items-center justify-center text-sm rounded-xl p-2 " +
             (filterContract
               ? "border-2 border-primaryDeep text-primaryDeep font-bold"
               : "border border-gray-200 text-deadGray font-light")

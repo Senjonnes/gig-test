@@ -41,7 +41,7 @@ const AppLayout: React.FC<Props> = ({ children }) => {
     <div className="relative min-h-screen md:flex">
       <div
         ref={sideBar}
-        className="fixed z-20 bg-fadedWhite border text-blue-100 w-64 space-y-10 py-10 px-2 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out"
+        className="fixed z-20 border text-blue-100 w-64 space-y-10 py-10 px-2 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out"
       >
         <a
           href="https://facebook.com"

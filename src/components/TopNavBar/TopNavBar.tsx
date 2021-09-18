@@ -12,12 +12,12 @@ const TopNavBar: React.FC<TopNav> = ({handleClick}) => {
     handleClick();
   };
   return (
-    <nav className="bg-fadedWhite border fixed top-nav-bar left-64 right-0">
+    <nav className="z-10 border fixed top-nav-bar left-64 right-0 bg-appBgColor">
       <div className="max-w-6xl mx-auto px-4 py-6">
         <div className="flex justify-between">
           <div className="flex space-x-4 w-1/2 py-5 px-2 hidden md:flex ">
             <div className="relative flex w-full flex-wrap items-stretch">
-              <span className="z-10 h-full leading-snug font-normal absolute text-center text-blueGray-300 absolute bg-transparent rounded-lg text-base items-center justify-center w-8 pl-3 py-3">
+              <span className="z-10 h-full leading-snug font-normal absolute text-center text-blueGray-300 absolute rounded-lg text-base items-center justify-center w-8 pl-3 py-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5"
@@ -36,7 +36,7 @@ const TopNavBar: React.FC<TopNav> = ({handleClick}) => {
               <input
                 type="text"
                 placeholder="Search"
-                className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded-lg text-sm border border-blueGray-300 outline-none focus:outline-none focus:ring w-full pl-12"
+                className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative rounded-lg text-sm border border-blueGray-300 outline-none focus:outline-none focus:ring w-full pl-12"
               />
             </div>
           </div>

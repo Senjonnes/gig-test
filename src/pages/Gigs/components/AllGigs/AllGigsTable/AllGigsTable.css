@@ -1,0 +1,12 @@
+.all_gigs_table td {
+  border-top: 8px solid #fbfbff;
+  border-bottom: 8px solid #fbfbff;
+  color: #49484d;
+  background: #ffffff;
+}
+
+.all_gigs_table thead tr th {
+  background: #fbfbff;
+  color: #777c91;
+  border: none;
+}
